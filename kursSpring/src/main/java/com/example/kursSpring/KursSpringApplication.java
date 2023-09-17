@@ -12,6 +12,8 @@ public class KursSpringApplication
 	public static void main(String[] args)
 	{
 		SpringApplication.run(KursSpringApplication.class, args);
+
+
 		/* Zly zapis, sa lepsze narzedzia
 		ConfigurableApplicationContext ctx = SpringApplication.run(KursSpringApplication.class, args);
 		Castle castle = (Castle)ctx.getBean("castle");

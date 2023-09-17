@@ -15,6 +15,7 @@ public class Starter implements CommandLineRunner
     @Override
     public void run(String... args) throws Exception
     {
+        System.out.println(castle);
         Quest savePrincess = new Quest("Save princess");
         Quest dragonKilling = new Quest("Kill the Dragon");
         Knight lancelot = new Knight("Lancelot", 29, savePrincess); //Wstrzykiwanie zależności
