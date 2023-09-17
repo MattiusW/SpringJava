@@ -12,7 +12,6 @@ public class Castle
     {
 
     }
-
     @PostConstruct //Metoda, którą chcemy by wykonała się po tym jak Spring zostanie utworzony.
     public void build()
     {
@@ -23,5 +22,10 @@ public class Castle
     public void tearDown()
     {
         System.out.println("Zaraz wyburzymy zamek " + name);
+    }
+    @Override
+    public String toString()
+    {
+        return "Znajduje sie tu zamek o nazwie: " + this.name;
     }
 }
