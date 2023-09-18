@@ -20,6 +20,12 @@ public class Castle
     {
         this.knight = knight;
     }
+
+    Castle(Knight knight, String name)
+    {
+        this.knight = knight;
+        this.name = name;
+    }
     @PostConstruct //Metoda, którą chcemy by wykonała się po tym jak Spring zostanie utworzony.
     public void build()
     {
