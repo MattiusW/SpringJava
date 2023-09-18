@@ -13,12 +13,12 @@ public class Castle
 {
     @Value("${my.castle.name}")
     private String name;
+    Knight knight;
 
     @Autowired
-    Knight knight;
-    public Castle()
+    public Castle(Knight knight)
     {
-
+        this.knight = knight;
     }
     @PostConstruct //Metoda, którą chcemy by wykonała się po tym jak Spring zostanie utworzony.
     public void build()
