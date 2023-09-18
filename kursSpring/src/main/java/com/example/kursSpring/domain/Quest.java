@@ -1,8 +1,6 @@
 package com.example.kursSpring.domain;
 
 import org.springframework.stereotype.Component;
-
-@Component
 public class Quest
 {
     private String description;
@@ -16,6 +14,5 @@ public class Quest
     {
         return description;
     }
-
 
 }

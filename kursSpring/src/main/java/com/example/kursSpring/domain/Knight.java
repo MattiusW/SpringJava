@@ -4,13 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component
 public class Knight
 {
     //@Value("Lancelot") Nigdy nie uzywane
-    private String name = "Lancelot";
+    private String name;
     //@Value("29") Nigdy nie uzywane
-    private int age = 29;
+    private int age;
     private Quest quest;
 
     public Knight()
@@ -24,13 +23,12 @@ public class Knight
 //        this.age = age;
 //       this.quest = quest;
 //    }
-//    public Knight(String name, int age)
-//    {
-//        this.name = name;
-//       this.age = age;
-//   }
+   public Knight(String name, int age)
+   {
+       this.name = name;
+       this.age = age;
+   }
 
-    @Autowired
     public void setQuest(Quest quest) //Wstrzykiwanie zależności poprzez settera, metode
     {
         System.out.println("Ustawiam zadanie dla rycerza");
