@@ -13,6 +13,7 @@ public class Castle
 {
     @Value("${my.castle.name}")
     private String name;
+    @Autowired
     Knight knight;
 
     @Autowired

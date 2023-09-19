@@ -9,9 +9,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@PropertySource("classpath:castle.properties")
+//@PropertySource("classpath:castle.properties")
 public class MainConfig
 {
+    /*
     @Bean //Konfiguracja beanow
     public Quest createQuest()
     {
@@ -33,6 +34,7 @@ public class MainConfig
 
         return castle;
     }
+     */
 
 
 }

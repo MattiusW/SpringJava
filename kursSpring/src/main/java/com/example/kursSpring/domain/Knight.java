@@ -2,9 +2,11 @@ package com.example.kursSpring.domain;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("prototype") //Wstrzykiwanie nowej instancji
 public class Knight
 {
     //@Value("Lancelot") Nigdy nie uzywane
@@ -15,7 +17,8 @@ public class Knight
 
     public Knight()
     {
-
+        this.name = "Lancelot";
+        this.age = 29;
     }
 
 //    public Knight(String name, int age, Quest quest) //Wstrzykiwanie zależności poprzez klasę nadrzędną
@@ -29,11 +32,18 @@ public class Knight
        this.name = name;
        this.age = age;
    }
-
+    @Autowired
     public void setQuest(Quest quest) //Wstrzykiwanie zależności poprzez settera, metode
     {
         System.out.println("Ustawiam zadanie dla rycerza");
         this.quest = quest;
+    }
+    public void setAge(int age){
+        this.age = age;
+    }
+
+    public int getAge(){
+        return age;
     }
     @Override
     public String toString()
