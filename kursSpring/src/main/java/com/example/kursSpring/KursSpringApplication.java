@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
 //@ComponentScan(basePackageClasses = {Starter.class, Castle.class, Quest.class, Knight.class, TestComponent.class})
-@ImportResource("classpath:config/spring-config.xml")
+//@ImportResource("classpath:config/spring-config.xml") //Konfiguracja beanow za pomoca XML
 public class KursSpringApplication
 {
 

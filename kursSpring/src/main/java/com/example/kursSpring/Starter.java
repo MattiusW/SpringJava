@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class Starter implements CommandLineRunner
 {
-    @Autowired
-    TestComponent test;
+    //@Autowired
+    //TestComponent test;
 
     @Autowired
     Castle castle;

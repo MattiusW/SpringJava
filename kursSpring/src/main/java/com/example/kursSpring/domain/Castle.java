@@ -26,6 +26,12 @@ public class Castle
         this.knight = knight;
         this.name = name;
     }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
     @PostConstruct //Metoda, którą chcemy by wykonała się po tym jak Spring zostanie utworzony.
     public void build()
     {
@@ -42,4 +48,5 @@ public class Castle
     {
         return "Znajduje sie tu zamek o nazwie: " + this.name + " Zamieszkaly przez rycerza " + knight;
     }
+
 }
