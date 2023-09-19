@@ -19,6 +19,7 @@ public class MainConfig
         return new Quest();
     }
     @Bean
+    @Scope("prototype")
     public Knight knight()
     {
         Knight knight = new Knight("Lancelot", 29);
