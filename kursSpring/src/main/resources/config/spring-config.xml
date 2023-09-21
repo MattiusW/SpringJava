@@ -16,4 +16,14 @@
         <constructor-arg index="1" value="29"/>
         <property name="quest" ref="quest"/>
     </bean>
+
+    <bean id="tournament" class="com.example.kursSpring.domain.Tournament">
+        <property name="knights">
+            <map>
+                <entry key="lancelot" value-ref="lancelot"/>
+                <entry key="percival" value-ref="percival"/>
+            </map>
+        </property>
+    </bean>
+
 </beans>
