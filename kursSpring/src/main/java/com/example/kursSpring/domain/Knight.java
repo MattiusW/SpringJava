@@ -1,12 +1,9 @@
 package com.example.kursSpring.domain;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
+import java.util.Objects;
 
-@Component
-@Scope("prototype") //Wstrzykiwanie nowej instancji
+//@Component
+//@Scope("prototype") //Wstrzykiwanie nowej instancji
 public class Knight
 {
     //@Value("Lancelot") Nigdy nie uzywane
@@ -27,12 +24,11 @@ public class Knight
 //        this.age = age;
 //       this.quest = quest;
 //    }
-   public Knight(String name, int age)
-   {
+    public Knight(String name, int age)
+    {
        this.name = name;
        this.age = age;
-   }
-    @Autowired
+    }
     public void setQuest(Quest quest) //Wstrzykiwanie zależności poprzez settera, metode
     {
         System.out.println("Ustawiam zadanie dla rycerza");

@@ -1,14 +1,11 @@
 package com.example.kursSpring.domain;
 
-import org.springframework.stereotype.Component;
-@Component
 public class Quest
 {
     private String description;
 
-    public Quest()
-    {
-        this.description = "Uratuj ksiezniczke";
+    public Quest(String description) {
+        this.description = description;
     }
 
     public String toString()

@@ -1,6 +1,6 @@
 package com.example.kursSpring;
 
-import com.example.kursSpring.domain.Castle;
+import com.example.kursSpring.repository.KnightRepository;
 import com.example.kursSpring.domain.Knight;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ class KursSpringApplicationTests {
 	Knight knight;
 
 	@Autowired
-	Castle castle;
+    KnightRepository castle;
 
 	@Test
 	void contextLoads() {

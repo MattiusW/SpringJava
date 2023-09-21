@@ -1,13 +1,6 @@
 package com.config;
 
-import com.example.kursSpring.domain.Castle;
-import com.example.kursSpring.domain.Quest;
-import com.example.kursSpring.domain.Knight;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 //@PropertySource("classpath:castle.properties")
@@ -37,9 +30,5 @@ public class MainConfig
         return castle;
     }
      */
-    @Autowired
-    Quest quest;
-
-
 
 }
