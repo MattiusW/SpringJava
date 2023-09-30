@@ -1,6 +1,7 @@
-package com.clockworkjava.kursspring.domain;
+package com.example.kursspring.domain;
 
 public class Knight {
+
     private String name;
     private int age;
 
