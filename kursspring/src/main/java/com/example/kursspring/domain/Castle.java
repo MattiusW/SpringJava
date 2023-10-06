@@ -14,11 +14,15 @@ public class Castle {
     @Value("${my.castle.name:East Watch}")
     private String name;
 
-
     Knight knight;
     @Autowired
     public Castle(Knight knight){
         this.knight = knight;
+    }
+
+    Castle(Knight knight, String name){
+        this.knight = knight;
+        this.name = name;
     }
 
     @PostConstruct
