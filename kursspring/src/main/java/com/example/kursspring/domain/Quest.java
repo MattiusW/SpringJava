@@ -1,11 +1,14 @@
 package com.example.kursspring.domain;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Quest {
 
     private String description;
 
-    public Quest(String description){
-        this.description = description;
+    public Quest(){
+        this.description = description = "Uratuj ksiezniczke";
     }
 
     @Override
