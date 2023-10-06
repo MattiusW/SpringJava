@@ -23,4 +23,9 @@ public class Castle {
         System.out.println("Zaraz wyburzymy zamek " + name);
     }
 
+    @Override
+    public String toString() {
+        return "Zamek nazwa: " + this.name;
+    }
+
 }
