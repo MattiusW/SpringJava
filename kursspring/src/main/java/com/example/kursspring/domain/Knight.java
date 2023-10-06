@@ -1,9 +1,17 @@
 package com.example.kursspring.domain;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Knight {
 
-    private String name;
-    private int age;
+    private String name = "Lancelot";
+    private int age = 29;
+
+    public Knight(){
+
+    }
 //    private Quest quest;
 
 //    public Knight(String name, int age, Quest quest){
@@ -12,10 +20,10 @@ public class Knight {
 //        this.quest = quest;
 //    }
 
-    public Knight(String name, int age){
-        this.name = name;
-        this.age = age;
-    }
+//    public Knight(String name, int age){
+//        this.name = name;
+//        this.age = age;
+//    }
 
 //    public void setQuest(Quest quest){
 //        this.quest = quest;
