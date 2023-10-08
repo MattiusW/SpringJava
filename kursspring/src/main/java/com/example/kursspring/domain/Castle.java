@@ -35,6 +35,10 @@ public class Castle {
         System.out.println("Zaraz wyburzymy zamek " + name);
     }
 
+    public void setName(String name){
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return "Zamek nazwa: " + this.name + " mieszka: " + knight;
