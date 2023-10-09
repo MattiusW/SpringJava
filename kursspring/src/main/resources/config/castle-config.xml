@@ -13,3 +13,4 @@
     <constructor-arg index="0" ref="knight"/>
     <property name="name" value="${my.castle.name:East Watch}"/>
 </bean>
+</beans>
