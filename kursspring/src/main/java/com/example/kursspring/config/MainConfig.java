@@ -20,6 +20,7 @@ public class MainConfig {
 //    }
 
 //    @Bean
+//    @Scope("prototype")
 //    public Knight knight(){
 //        Knight knight = new Knight("Lancelot", 29);
 //        knight.setQuest(createQuest());
