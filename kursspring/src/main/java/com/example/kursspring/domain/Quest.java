@@ -1,5 +1,8 @@
 package com.example.kursspring.domain;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Quest {
 
     private String description = "Uratuj ksiezniczke";

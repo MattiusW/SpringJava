@@ -8,7 +8,6 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
-@PropertySource("classpath:castle.properties")
 public class Castle {
 
     @Value("${my.castle.name:East Watch}")
