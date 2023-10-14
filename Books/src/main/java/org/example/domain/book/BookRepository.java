@@ -11,6 +11,7 @@ public class BookRepository {
         Random r = new Random();
         Book newOne = new Book(r.nextInt(), title);
         this.books.add(newOne);
+        System.out.println("Utworzylem nowa ksiazke o tytytule: " + newOne.getTitle());
         return newOne;
     }
 }

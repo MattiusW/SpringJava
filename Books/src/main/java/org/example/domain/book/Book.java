@@ -9,4 +9,7 @@ public class Book {
         this.id = id;
         this.title = title;
     }
+    public String getTitle(){
+        return this.title;
+    }
 }

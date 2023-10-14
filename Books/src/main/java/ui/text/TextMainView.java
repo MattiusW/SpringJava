@@ -1,8 +1,12 @@
 package ui.text;
+import org.example.domain.book.BookService;
+
 import java.util.Scanner;
 public class TextMainView {
 
+    private BookService bookService = new BookService();
     public void init(){
+
         System.out.println("Books - System do zarzadzania zbiorami biblotecznymi");
 
         System.out.println("Wybierz operacje:");
@@ -24,6 +28,8 @@ public class TextMainView {
     }
 
     private void handleCreateNewBook(Scanner scanner){
-
+        System.out.println("Podaj tytul ksiazki: ");
+        String title = scanner.nextLine();
+        this.bookService.createNewBook(title);
     }
 }
