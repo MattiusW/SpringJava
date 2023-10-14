@@ -1,10 +1,13 @@
 package org.example.domain.book;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Random;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 public class BookRepository {
 
@@ -17,11 +20,15 @@ public class BookRepository {
         System.out.println("Utworzylem nowa ksiazke o tytule: " + newOne.getTitle());
         return newOne;
     }
-
-    void readAll(){
-
+    void readAll() throws FileNotFoundException {
+        Gson gson = new Gson();
+        FileReader fr = new FileReader("./books.json");
+        List<Book> loadedBooks = gson.fromJson(fr, new TypeToken<List<Book>>() {}.getType());
+        this.books.addAll(loadedBooks);
+        this.books.forEach(book -> {
+            System.out.println("Zaladowano ksiazke " + book.getTitle());
+        });
     }
-
     void saveAll() throws IOException {
         Gson gson = new Gson(); //Reload Maven
         FileWriter fw = new FileWriter("./books.json");
