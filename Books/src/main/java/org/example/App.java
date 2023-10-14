@@ -1,8 +1,11 @@
 package org.example;
 
+import ui.text.TextMainView;
+
 public class App {
 
     public static void main( String[] args ) {
-        System.out.println("Books - System do zarzadzania zbiorami biblotecznymi");
+        TextMainView view = new TextMainView();
+        view.init();
     }
 }
