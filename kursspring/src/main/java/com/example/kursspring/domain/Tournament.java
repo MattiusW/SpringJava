@@ -3,29 +3,30 @@ package com.example.kursspring.domain;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class Tournament {
 
     @Autowired
-    @Qualifier(value="percival")
-    Knight knight;
+    List<Knight> knights;
 
     public Tournament(){
 
     }
 
     public void duel(){
-        knight.setAge(knight.getAge()+1);
+//        knight.setAge(knight.getAge()+1);
     }
 
-    public void setKnight(Knight knight){
-        this.knight = knight;
+    public void setKnight(List<Knight> knights){
+        this.knights = knights;
     }
 
     @Override
     public String toString(){
-        return "W turnieju bierze udzial rycerz " + knight;
+        return "W turnieju bierze udzial rycerze " + knights.stream().map(Object::toString).collect(Collectors.joining(","));
     }
 
 }
