@@ -24,7 +24,7 @@
                 <property name="quest" ref="quest"/>
         </bean>
 
-        <bean id="zamek" class="com.example.kursspring.domain.Castle" init-method="build" destroy-method="tearDown">
+        <bean id="zamek" class="com.example.kursspring.domain.repository.KnightRepository" init-method="build" destroy-method="tearDown">
               <constructor-arg index="0" ref="knight"/>
               <property name="name" value="${my.castle.name:East Watch}"/>
         </bean>

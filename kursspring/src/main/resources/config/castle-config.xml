@@ -9,7 +9,7 @@
 
 <context:property-placeholder location="classpath:castle.properties"/>
 
-<bean id="zamek" class="com.example.kursspring.domain.Castle"
+<bean id="zamek" class="com.example.kursspring.domain.repository.KnightRepository"
       init-method="build"
       destroy-method="tearDown">
     <constructor-arg index="0" ref="knight"/>
