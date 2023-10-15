@@ -17,10 +17,9 @@
 </bean>
 
     <bean id="tournament" class="com.example.kursspring.domain.Tournament">
-        <property name="knight">
+        <property name="knights">
             <list>
                 <ref bean="percival"/>
-                <ref bean="lancelot"/>
             </list>
         </property>
     </bean>
