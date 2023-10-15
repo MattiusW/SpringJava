@@ -5,9 +5,12 @@ import com.example.kursspring.domain.repository.QuestRepository;
 import com.example.kursspring.domain.services.QuestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Scope;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("singleton")
 public class Starter implements CommandLineRunner {
     @Autowired
     KnightRepository knightRepository;
@@ -22,10 +25,15 @@ public class Starter implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception{
 
+        questRepository.createRandomQuest();
+        System.out.println(questRepository);
+        questRepository.createRandomQuest();
+        System.out.println(questRepository);
+        questRepository.createRandomQuest();
+        System.out.println(questRepository);
+
         questService.assignRandomQuest("Lancelot");
         questService.assignRandomQuest("Percival");
-
-        System.out.println(knightRepository);
 
     }
 }
