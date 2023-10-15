@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 public class Tournament {
 
     @Autowired
-    Set<Knight> knights;
+    List<Knight> knights;
 
     public Tournament(){
 
@@ -21,7 +21,7 @@ public class Tournament {
 //        knight.setAge(knight.getAge()+1);
     }
 
-    public void setKnight(Set<Knight> knights){
+    public void setKnight(List<Knight> knights){
         this.knights = knights;
     }
 
