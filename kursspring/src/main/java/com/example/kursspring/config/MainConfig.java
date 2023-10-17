@@ -10,12 +10,14 @@ import org.springframework.context.annotation.*;
 public class MainConfig {
 
     @Bean("InMemoryKnightRepository")
+    @Profile("dev")
     public KnightRepository createInMemoryRepo(){
         KnightRepository repo = new InMemoryRepository();
         return repo;
     }
 
-    @Bean(name="DBRepository")
+    @Bean(name="DBKnightRepository")
+    @Profile("prod")
     public KnightRepository createDBRepo(){
         KnightRepository repo = new DBKnightRepository();
         return repo;

@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
 @Scope("singleton")
 public class Starter implements CommandLineRunner {
     @Autowired
-    @Qualifier("InMemoryKnightRepository")
     KnightRepository knightRepository;
 
     @Autowired

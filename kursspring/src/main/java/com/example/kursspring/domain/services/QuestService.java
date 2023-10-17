@@ -15,7 +15,6 @@ import java.util.Random;
 public class QuestService {
 
     @Autowired
-    @Qualifier("InMemoryKnightRepository")
     KnightRepository knightRepository;
 
     @Autowired
