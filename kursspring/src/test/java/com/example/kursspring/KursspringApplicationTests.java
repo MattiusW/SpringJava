@@ -1,7 +1,7 @@
 package com.example.kursspring;
 
-import com.example.kursspring.domain.repository.KnightRepository;
 import com.example.kursspring.domain.Knight;
+import com.example.kursspring.domain.repository.InMemoryRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,7 +15,7 @@ class KursspringApplicationTests {
 	Knight knight;
 
 	@Autowired
-    KnightRepository castle;
+	InMemoryRepository castle;
 
 	@Test
 	void contextLoads() {
@@ -23,7 +23,7 @@ class KursspringApplicationTests {
 
 	@Test
 	public void testCastle(){
-		String except = "Zamek nazwa: KnightRepository Black mieszka: Rycerz o imieniu Lancelot( 29 ) Zadanie: Uratuj ksiezniczke";
+		String except = "Zamek nazwa: InMemoryRepository Black mieszka: Rycerz o imieniu Lancelot( 29 ) Zadanie: Uratuj ksiezniczke";
 		assertEquals(except, castle.toString());
 
 	}

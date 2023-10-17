@@ -1,9 +1,11 @@
 package com.example.kursspring.domain.services;
 
 import com.example.kursspring.domain.Quest;
+import com.example.kursspring.domain.repository.InMemoryRepository;
 import com.example.kursspring.domain.repository.KnightRepository;
 import com.example.kursspring.domain.repository.QuestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,6 +15,7 @@ import java.util.Random;
 public class QuestService {
 
     @Autowired
+    @Qualifier("InMemoryKnightRepository")
     KnightRepository knightRepository;
 
     @Autowired
