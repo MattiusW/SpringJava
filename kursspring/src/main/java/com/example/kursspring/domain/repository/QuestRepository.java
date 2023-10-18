@@ -34,7 +34,6 @@ public class QuestRepository {
                 '}';
     }
 
-    @Scheduled(fixedDelay = 1000)
     public void createRandomQuest(){
         List<String> descriptions = new ArrayList<>();
 
@@ -44,7 +43,6 @@ public class QuestRepository {
         descriptions.add("Zabij smoka");
 
         String description = descriptions.get(rand.nextInt(descriptions.size()));
-        System.out.println("Utworzylem zadanie o opisie " + description);
         createQuest(description);
 
     }
