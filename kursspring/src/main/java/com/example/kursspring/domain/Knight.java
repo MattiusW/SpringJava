@@ -26,6 +26,14 @@ public class Knight {
         this.age = age;
     }
 
+    public String getName(){
+        return name;
+    }
+
+    public String setName(String name){
+        return this.name = name;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

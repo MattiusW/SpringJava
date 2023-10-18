@@ -5,6 +5,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-    <h1>Rycerze</h1>
+    <table>
+        <thead>
+        <tr>
+            <td>Imie rycerza</td>
+            <td>Wiek</td>
+        </tr>
+        </thead>
+    </table>
+    <div th:each="knight : ${knights}">
+        <tr>
+            <td th:text="${knight.name}"></td>
+            <td th:text="${knight.age}"></td>
+        <tr/>
+    </div>
 </body>
 </html>
