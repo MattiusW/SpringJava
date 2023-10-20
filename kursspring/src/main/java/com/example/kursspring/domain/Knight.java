@@ -1,8 +1,13 @@
 package com.example.kursspring.domain;
 
+import org.hibernate.validator.constraints.Range;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Objects;
 
 @Component
@@ -10,7 +15,13 @@ import java.util.Objects;
 public class Knight {
 
     private int id;
+
+    @NotNull
+    @Size(min=2, max=40, message = "Imie rycerza musi miec 2 a 40 znakow")
     private String name;
+
+    @NotNull
+    @Range(min = 18, max = 60, message = "Rycerz musi miec co najmniej 18 lat a nie wiecej niz 60")
     private int age;
     private int level;
 
