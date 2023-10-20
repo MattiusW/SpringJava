@@ -2,8 +2,8 @@ package com.example.kursspring.controllers;
 
 import com.example.kursspring.components.TimeComponent;
 import com.example.kursspring.domain.Knight;
+import com.example.kursspring.domain.PlayerInformation;
 import com.example.kursspring.domain.services.KnightService;
-import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +20,10 @@ public class KnightController {
 
     @Autowired
     TimeComponent timeComponent;
+
+    @Autowired
+    PlayerInformation playerInformation;
+
     @Autowired
     KnightService service;
 
@@ -28,6 +32,7 @@ public class KnightController {
         List<Knight> allKnights = service.getAllKnights();
         model.addAttribute("knights", allKnights);
         model.addAttribute("timecomponent", timeComponent);
+        model.addAttribute("playerinformation", playerInformation);
         return "knights";
     }
 
@@ -42,6 +47,7 @@ public class KnightController {
         Knight knight = service.getKnight(id);
         model.addAttribute("knight", knight);
         model.addAttribute("timecomponent", timeComponent);
+        model.addAttribute("playerinformation", playerInformation);
         return "knight";
     }
 
@@ -49,6 +55,7 @@ public class KnightController {
     public String createKnight(Model model){
         model.addAttribute("knight", new Knight());
         model.addAttribute("timecomponent", timeComponent);
+        model.addAttribute("playerinformation", playerInformation);
         return "knightform";
     }
 
