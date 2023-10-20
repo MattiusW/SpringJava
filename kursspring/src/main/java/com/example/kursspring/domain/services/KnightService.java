@@ -25,4 +25,8 @@ public class KnightService {
     public void saveKnight(Knight knight) {
         knightRepository.createKnight(knight);
     }
+
+    public void deleteKnight(Integer id) {
+        knightRepository.deleteKnight(id);
+    }
 }
