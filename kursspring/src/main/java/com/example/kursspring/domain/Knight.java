@@ -1,7 +1,5 @@
 package com.example.kursspring.domain;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -11,29 +9,19 @@ import java.util.Objects;
 @Scope("prototype")
 public class Knight {
 
+    private int id;
     private String name;
     private int age;
 
     private Quest quest;
 
     public Knight(){
-        this.name = "Lancelot";
-        this.age = 29;
     }
 
     public Knight(String name, int age){
         this.name = name;
         this.age = age;
     }
-
-    public String getName(){
-        return name;
-    }
-
-    public String setName(String name){
-        return this.name = name;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -52,12 +40,27 @@ public class Knight {
         this.quest = quest;
     }
 
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
     public void setAge(int age){
         this.age = age;
     }
 
     public int getAge(){
         return this.age;
+    }
+
+    public int getId(){
+        return id;
+    }
+
+    public void setId(int id){
+        this.id = id;
     }
 
     @Override
