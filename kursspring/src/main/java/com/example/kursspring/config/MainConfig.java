@@ -9,7 +9,7 @@ import org.springframework.context.annotation.*;
 @Configuration
 public class MainConfig {
 
-    @Bean("InMemoryKnightRepository")
+    @Bean(name="InMemoryKnightRepository")
     @Profile("dev")
     public KnightRepository createInMemoryRepo(){
         KnightRepository repo = new InMemoryRepository();
