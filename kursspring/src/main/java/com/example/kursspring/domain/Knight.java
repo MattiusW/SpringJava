@@ -12,6 +12,7 @@ public class Knight {
     private int id;
     private String name;
     private int age;
+    private int level;
 
     private Quest quest;
 
@@ -21,6 +22,7 @@ public class Knight {
     public Knight(String name, int age){
         this.name = name;
         this.age = age;
+        this.level = 1;
     }
     @Override
     public boolean equals(Object o) {
@@ -61,6 +63,13 @@ public class Knight {
 
     public void setId(int id){
         this.id = id;
+    }
+
+    public int getLevel(){
+        return level;
+    }
+    public void setLevel(int level){
+        this.level = level;
     }
 
     @Override

@@ -24,8 +24,8 @@
         <tbody>
             <tr th:each="knight : ${knights}">
             <td th:text="${knight.name}"></td>
-            <td th:text="${knight.age}"></td>
-            <td><a href="/knight?id=${knight.id}">Podglad</a></td>
+            <td th:text="${knight.level}"></td>
+            <td><a href="${'/knight?id='+knight.id}">Podglad</a></td>
         </tr>
         </tbody>
     </table>

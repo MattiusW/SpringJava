@@ -29,7 +29,8 @@ public class InMemoryRepository implements KnightRepository {
             return 0;
         }
         else {
-            return knights.keySet().stream().max(Integer::max).get();
+            Integer integer = knights.keySet().stream().max(Integer::max).get();
+            return integer + 1;
         }
     }
 
