@@ -8,6 +8,7 @@ import com.example.kursspring.domain.services.KnightService;
 import com.example.kursspring.domain.services.QuestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -27,5 +28,11 @@ public class QuestController {
         model.addAttribute("knight", knight);
         model.addAttribute("notStartedQuest", notStartedQuest);
         return "assignQuest";
+    }
+
+    @RequestMapping(value = "/assignQuest", method = RequestMethod.POST)
+    public String assignQuest(Knight knight){
+        knightService.updateKnight(knight);
+        return "redirect:/knights";
     }
 }

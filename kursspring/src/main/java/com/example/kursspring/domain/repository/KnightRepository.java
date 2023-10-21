@@ -2,6 +2,7 @@ package com.example.kursspring.domain.repository;
 
 import com.example.kursspring.domain.Knight;
 import jakarta.annotation.PostConstruct;
+import jdk.jshell.spi.ExecutionControl;
 
 import java.util.Collection;
 import java.util.Optional;
@@ -20,4 +21,6 @@ public interface KnightRepository {
     Knight getKnightById(Integer id);
 
     void createKnight(Knight knight);
+
+    default void updateKnight(int id, Knight knight) {throw new UnsupportedOperationException();};
 }
