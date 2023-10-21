@@ -34,6 +34,7 @@ public class QuestRepository {
                 '}';
     }
 
+    @Scheduled(fixedDelayString  = "${questCreationDelay}")
     public void createRandomQuest(){
         List<String> descriptions = new ArrayList<>();
 

@@ -50,8 +50,11 @@ public class Knight {
     }
 
     public void setQuest(Quest quest){
-        System.out.println("Ustawiam zadanie dla rycerza");
         this.quest = quest;
+    }
+
+    public Quest getQuest(){
+        return quest;
     }
 
     public String getName(){
