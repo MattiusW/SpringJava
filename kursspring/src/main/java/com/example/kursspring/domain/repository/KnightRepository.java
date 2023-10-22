@@ -22,5 +22,7 @@ public interface KnightRepository {
 
     void createKnight(Knight knight);
 
-    default void updateKnight(int id, Knight knight) {throw new UnsupportedOperationException();};
+    default void updateKnight(int id, Knight knight) {
+        throw new UnsupportedOperationException("updateKnight method is not implemented");
+    }
 }
