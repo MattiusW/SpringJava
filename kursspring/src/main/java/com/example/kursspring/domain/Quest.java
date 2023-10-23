@@ -1,7 +1,16 @@
 package com.example.kursspring.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Quest {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     private String description;
 
     private int reward = 100;
@@ -11,6 +20,10 @@ public class Quest {
     private boolean started = false;
 
     private boolean completed = false;
+
+    public Quest(){
+
+    }
 
     public Quest(String description){
         this.description = description;

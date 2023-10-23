@@ -1,5 +1,6 @@
 package com.example.kursspring.domain;
 
+import jakarta.persistence.*;
 import org.hibernate.validator.constraints.Range;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -12,8 +13,11 @@ import java.util.Objects;
 
 @Component
 @Scope("prototype")
+@Entity
 public class Knight {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     @NotNull
@@ -25,6 +29,7 @@ public class Knight {
     private int age;
     private int level;
 
+    @OneToOne
     private Quest quest;
 
     public Knight(){
