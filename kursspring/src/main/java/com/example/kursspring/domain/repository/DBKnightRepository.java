@@ -20,14 +20,13 @@ public class DBKnightRepository implements KnightRepository {
 
     @Override
     public Collection<Knight> getAllKnights(){
-        System.out.println("Uzywam bazy danych");
-        throw new UnsupportedOperationException("Not implemented yet");
+        return em.createQuery("from Knight", Knight.class).getResultList();
     }
 
     @Override
     public Optional<Knight> getKnight(String name){
-        System.out.println("Uzywam bazy danych");
-        throw new UnsupportedOperationException("Not implemented yet");
+        Knight knightByName = em.createQuery("from Knight k where k.name=:name", Knight.class).setParameter("name", name).getSingleResult();
+        return Optional.ofNullable(knightByName);
     }
 
     @Override
