@@ -2,14 +2,20 @@ package com.example.kursspring.domain.repository;
 
 import com.example.kursspring.domain.Knight;
 import jakarta.annotation.PostConstruct;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+
 import java.util.Collection;
 import java.util.Optional;
 
 public class DBKnightRepository implements KnightRepository {
+
+    @PersistenceContext
+    private EntityManager em;
     @Override
     public void createKnight(String name, int age){
-        System.out.println("Uzywam bazy danych");
-        throw new UnsupportedOperationException("Not implemented yet");
+        Knight knight = new Knight(name, age);
+        em.persist(knight);
     }
 
     @Override

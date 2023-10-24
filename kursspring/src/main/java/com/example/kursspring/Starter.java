@@ -4,6 +4,7 @@ import com.example.kursspring.domain.repository.InMemoryRepository;
 import com.example.kursspring.domain.repository.KnightRepository;
 import com.example.kursspring.domain.repository.QuestRepository;
 import com.example.kursspring.domain.services.QuestService;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
