@@ -4,6 +4,7 @@ import com.example.kursspring.domain.Knight;
 import jakarta.annotation.PostConstruct;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 
 import java.util.Collection;
 import java.util.Optional;
@@ -30,9 +31,9 @@ public class DBKnightRepository implements KnightRepository {
     }
 
     @Override
+    @Transactional
     public void deleteKnight(Integer id){
-        System.out.println("Uzywam bazy danych");
-        throw new UnsupportedOperationException("Not implemented yet");
+        em.remove(id);
     }
 
     @Override
