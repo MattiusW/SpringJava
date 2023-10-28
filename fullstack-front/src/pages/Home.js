@@ -1,6 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axois from "axois";
+import { async } from 'q';
 
 export default function Home() {
+
+    const [users, setUsers]=useState([])
+
+    useEffect(()=> {
+        loadUsers();
+    },[]);
+
+    const loadUsers= async () => {
+        const result = await axois.get("http://localhost:8080/users");
+        console.log(result);
+    }
+
   return (
     <div className='container'>
         <div className='py-4'>
