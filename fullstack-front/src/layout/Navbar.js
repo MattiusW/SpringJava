@@ -4,10 +4,10 @@ export default function
 () {
   return (
     <div>
-        <nav className="navbar navbar-expand-lg bg-light">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">
-                    Navbar
+                    Full Stack Application
                 </a>
                 <button
                     className="navbar-toggler"
@@ -20,6 +20,8 @@ export default function
                     >
                         <span className="navbar-toggler-icon"></span>
                     </button>
+
+                    <button className="btn btn-outline-light">Add User</button>
             </div>
         </nav>
     </div>
