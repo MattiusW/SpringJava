@@ -1,11 +1,18 @@
-package pl.bykowski.videoapp;
+package pl.bykowski.videoapp.dao.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.time.LocalDate;
 
+@Entity
 public class VideoCassette {
 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
     private Long id;
     private String title;
     private LocalDate productionYear;
