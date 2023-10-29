@@ -1,10 +1,10 @@
-package com.nullpointerexception.resapl;
+package pl.bykowski.videoapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ResaplApplicationTests {
+class VideoAppApplicationTests {
 
 	@Test
 	void contextLoads() {
