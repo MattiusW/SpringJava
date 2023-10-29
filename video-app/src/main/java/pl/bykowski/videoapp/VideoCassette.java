@@ -1,5 +1,7 @@
 package pl.bykowski.videoapp;
 
+import org.springframework.web.bind.annotation.RequestBody;
+
 import java.time.LocalDate;
 
 public class VideoCassette {

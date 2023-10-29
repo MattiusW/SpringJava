@@ -1,9 +1,7 @@
 package pl.bykowski.videoapp;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 import java.util.ArrayList;
 import java.time.LocalDate;
@@ -33,6 +31,20 @@ public class VideoCassetteApi {
         return first.get();
     }
 
+    @PostMapping
+    public boolean addVideo(@RequestBody VideoCassette videoCassette) {
+        return videoCassettes.add(videoCassette);
+    }
+
+    @PutMapping
+    public boolean updateVideo(@RequestBody VideoCassette videoCassette) {
+        return videoCassettes.add(videoCassette);
+    }
+
+    @DeleteMapping
+    public boolean deleteVideo(@RequestParam int index){
+        return videoCassettes.removeIf(element -> element.getId() == index);
+    }
 
 
 }
