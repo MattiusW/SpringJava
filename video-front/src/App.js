@@ -1,16 +1,26 @@
 import { Component } from 'react';
-
+import Film from "./Film"
 
 class App extends Component{
 
   state = {
+    data: [],
     name: "Mati"
+  }
+
+  componentDidMount(){
+    fetch('http://localhost:8080/api/cassetts/all')
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      this.setState({data})
+    });
   }
 
   render(){
     return(
       <div>
-        Hello {this.state.name}
+        {this.state.data.map(film => <Film info={film}/>)}
       </div>
     )
   }
