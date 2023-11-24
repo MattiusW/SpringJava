@@ -24,4 +24,16 @@ public class Ingredient {
                 .filter(ingredient -> ingredient.getType() == type)
                 .collect(Collectors.toList());
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Type getType() {
+        return type;
+    }
 }

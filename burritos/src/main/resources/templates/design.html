@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"/>
+
+    <script th:scr="@{webjars/jquery/3.2.1/jquery.min.js}"></script>
+    <script th:scr="@{webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+
+</head>
+<body>
+<h1><b>Make own taco</b></h1>
+
+<img th:src="@{/images/BurritoLogo.png}"/>
+
+<form method="POST" th:object="${design}">
+
+    <div class="grid">
+        <div class="ingredient-group" id="wraps">
+            <h3>Select kind of flour:</h3>
+            <div th:each="ingredient : ${wrap}">
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span><br/>
+            </div>
+        </div>
+
+        <div class="ingredient-group" id="proteins">
+            <h3>Select meat:</h3>
+            <div th:each="ingredient : ${protein}">
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span><br/>
+            </div>
+        </div>
+
+        <div class="ingredient-group" id="cheeses">
+            <h3>Select cheeses:</h3>
+            <div th:each="ingredient : ${cheese}">
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span><br/>
+            </div>
+        </div>
+
+        <div class="ingredient-group" id="veggies">
+            <h3>Select veggies:</h3>
+            <div th:each="ingredient : ${veggies}">
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span><br/>
+            </div>
+        </div>
+
+        <div class="ingredient-group" id="sauces">
+            <h3>Select sauces:</h3>
+            <div th:each="ingredient : ${sauce}">
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span><br/>
+            </div>
+        </div>
+
+
+    <h3>Take taco name:</h3>
+    <input type="text" th:field="*{name}"/>
+
+    <button>Send order</button>
+
+    </div>
+</form>
+
+</body>
+</html>
