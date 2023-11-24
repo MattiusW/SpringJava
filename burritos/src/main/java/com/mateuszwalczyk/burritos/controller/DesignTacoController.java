@@ -1,6 +1,7 @@
 package com.mateuszwalczyk.burritos.controller;
 
 import com.mateuszwalczyk.burritos.model.Ingredient;
+import com.mateuszwalczyk.burritos.model.Taco;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.asm.Type;
 import org.springframework.boot.Banner;
@@ -35,7 +36,7 @@ public class DesignTacoController {
         for(Ingredient.Type type : types){
             model.addAttribute(type.toString().toLowerCase(), Ingredient.filterByType(ingredients, type));
         }
-        model.addAttribute("design", new Object());
+        model.addAttribute("design", new Taco());
         return "design";
     }
 
